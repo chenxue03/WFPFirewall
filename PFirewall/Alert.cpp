@@ -292,8 +292,4 @@ void Alert::OnBnClickedButton122222222()
 	BlockPortScanning(engine, FILTER_NAME, &provider.providerKey, &subLayer.subLayerKey);
 	MessageBox(L"¿ªÆô³É¹¦", _T("SUCCESS"), MB_OK);
 	CButton* pBtnStart, * pBtnStop;
-	pBtnStart = (CButton*)GetDlgItem(IDC_BUTTON1);
-	pBtnStop = (CButton*)GetDlgItem(IDC_BUTTON3);
-	pBtnStart->EnableWindow(FALSE);
-	pBtnStop->EnableWindow(TRUE);
 }
