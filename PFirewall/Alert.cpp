@@ -284,7 +284,16 @@ void Alert::InstallProvider(
 )
 {
 	aaa = FwpmProviderAdd0(engine, providerName, NULL);
-	bb = aaa;
-	cc = aaa;
-	dd = aaa;
+}
+
+void Alert::OnBnClickedButton122222222()
+{
+	InstallProvider(&PROVIDER_KEY, PROVIDER_NAME, &SUBLAYER_KEY, SUBLAYER_NAME);
+	BlockPortScanning(engine, FILTER_NAME, &provider.providerKey, &subLayer.subLayerKey);
+	MessageBox(L"¿ªÆô³É¹¦", _T("SUCCESS"), MB_OK);
+	CButton* pBtnStart, * pBtnStop;
+	pBtnStart = (CButton*)GetDlgItem(IDC_BUTTON1);
+	pBtnStop = (CButton*)GetDlgItem(IDC_BUTTON3);
+	pBtnStart->EnableWindow(FALSE);
+	pBtnStop->EnableWindow(TRUE);
 }
