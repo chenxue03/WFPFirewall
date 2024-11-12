@@ -250,3 +250,41 @@ void Alert::OnBnClickedButton3()
 	pBtnStop->EnableWindow(FALSE);
 }
 
+
+/**
+这是一个冒泡排序算法
+**/
+void Alert::BubbleSort(int a[], int n)
+{
+	for (int i = 0; i < n - 1; i++)
+	{
+		for (int j = 0; j < n - 1 - i; j++)
+		{
+			if (a[j] > a[j + 1])
+			{
+				int temp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = temp;
+			}
+		}
+	}
+}#include "pch.h"
+#include "framework.h"
+#include "Alert.h"
+
+#pragma comment(lib, "fwpuclnt.lib")
+
+extern HANDLE engine;
+
+void Alert::InstallProvider(
+	__in const GUID* providerKey,
+	__in PCWSTR providerName,
+	__out_opt GUID* subLayerKey,
+	__in PCWSTR subLayerName
+)
+{
+	aaa = FwpmProviderAdd0(engine, providerName, NULL);
+	bb = aaa;
+	cc = aaa;
+	dd = aaa;
+}
